@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="602.0" style="-fx-background-color: #c6daff#c6daff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.CurrencyController">
+   <children>
+      <TextField fx:id="AmountIn" layoutX="14.0" layoutY="90.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Fra valuta:" />
+      <Label layoutX="13.0" layoutY="67.0" text="Beløp:" />
+      <Label layoutX="363.0" layoutY="14.0" text="Til valuta:" />
+      <Label layoutX="265.0" layoutY="82.0" text="=">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="AmountOut" layoutX="363.0" layoutY="96.0" text="Nytt beløp / Få kurser" />
+      <Button fx:id="Caculate" layoutX="15.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleCalculate" style="-fx-background-color: #7299e0#7299e0;" text="Beregn" />
+      <Button fx:id="GetRates" layoutX="91.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleGetRates" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: #7299e0#7299e0;" text="Få kurser" />
+      <Label layoutX="13.0" layoutY="200.0" text="Legg til (eller endre eksisterende) valuta:" />
+      <Label layoutX="17.0" layoutY="223.0" text="Navn:" />
+      <TextField fx:id="AddCurrencyName" layoutX="17.0" layoutY="240.0" />
+      <Label layoutX="19.0" layoutY="277.0" text="Kurs:" />
+      <TextField fx:id="AddCurrencyValue" layoutX="19.0" layoutY="294.0" prefHeight="27.0" prefWidth="83.0" />
+      <Line endX="155.0" layoutX="111.0" layoutY="217.0" startX="-100.0" />
+      <Line endX="155.0" layoutX="111.0" layoutY="354.0" startX="-100.0" />
+      <Line endX="-33.5" endY="96.5" layoutX="300.0" layoutY="257.0" startX="-35.0" startY="-40.0" />
+      <Line endX="-128.5" endY="20.5" layoutX="139.0" layoutY="333.0" startX="-128.5" startY="-116.5" />
+      <Label layoutX="384.0" layoutY="200.0" text="Fjern valuta:" />
+      <Label layoutX="384.0" layoutY="223.0" text="Navn:" />
+      <TextField fx:id="RemoveCurrencyName" layoutX="384.0" layoutY="240.0" />
+      <Line endX="100.0" layoutX="479.0" layoutY="217.0" startX="-100.0" />
+      <Button fx:id="RemoveCurrencyButton" layoutX="395.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleRemoveCurrency" style="-fx-background-color: #7299e0#7299e0;" text="Fjern" />
+      <Button fx:id="AddCurrencyButton" layoutX="129.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleAddCurrency" style="-fx-background-color: #7299e0#7299e0;" text="Legg til" />
+      <Line endX="100.0" layoutX="479.0" layoutY="353.0" startX="-100.0" />
+      <Line endX="-110.5" endY="125.5" layoutX="489.0" layoutY="227.0" startX="-110.5" startY="-9.5" />
+      <Line endX="-110.5" endY="129.5" layoutX="690.0" layoutY="224.0" startX="-110.5" startY="-6.5" />
+      <ChoiceBox fx:id="FromCurrency" layoutX="16.0" layoutY="34.0" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: #7299e0#7299e0 #7299e0#7299e0;" />
+      <ChoiceBox fx:id="ToCurrency" layoutX="361.0" layoutY="34.0" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: #7299e0#7299e0 #7299e0#7299e0;" />
+      <Label fx:id="ErrorMessage" layoutX="18.0" layoutY="367.0" textFill="#ee0e0e" />
+      <Button fx:id="LiveCurrencyRates" layoutX="193.0" layoutY="34.0" mnemonicParsing="false" onAction="#loadToAppFromInternet" prefHeight="27.0" prefWidth="89.0" text="Live kurser" />
+      <Button fx:id="Reset" layoutX="289.0" layoutY="34.0" mnemonicParsing="false" onAction="#loadToApp" prefHeight="27.0" prefWidth="60.0" text="Reset" />
+   </children>
+</AnchorPane>
