@@ -23,7 +23,7 @@ import java.util.Set;
 	    public static HashMap<String, Double> GetMapInternet() throws IOException { 
 
 	        // Make a URL to the web page
-	        URL url = new URL("http://data.fixer.io/api/latest?access_key=c2517547854f2c089f40062b9186d251");
+	        URL url = new URL("http://data.fixer.io/api/latest?access_key=????");
 
 	        // Get the input stream through URL Connection
 	        URLConnection con = url.openConnection();
